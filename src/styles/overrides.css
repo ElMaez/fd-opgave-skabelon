@@ -1,1 +1,7 @@
 /* Override styles here */
+
+@layer Override {
+  html {
+    line-height: var(--lhText);
+  }
+}
