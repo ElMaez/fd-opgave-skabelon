@@ -2,6 +2,10 @@
 
 @layer Override {
   html {
+    font-family: var(--font-Lato);
+    font-weight: var(--Weight400);
+    font-size: var(--p);
     line-height: var(--lhText);
+    color: var(--Black);
   }
 }

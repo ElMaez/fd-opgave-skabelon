@@ -1,0 +1,21 @@
+---
+const { type = "button", theme } = Astro.props;
+---
+
+<!-- de ting knappen skal kunne: --><!-- fuld farve: 5 forskellige farver--><!-- tekst: et ord eller en sætning--><!-- kan være forskellige iconer--><!-- kort sagt: 5 farver, tekst og iconer : responsivt-->
+<button {type}>
+  <slot />
+</button>
+
+<style>
+  button {
+    /* Default styles */
+    padding: 0.25rlh 1rlh;
+    background-color: var(--Yellow);
+    border-radius: 50px;
+  }
+
+  button:hover {
+    background-color: var(--LightYellow);
+  }
+</style>
