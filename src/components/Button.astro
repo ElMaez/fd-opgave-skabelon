@@ -1,9 +1,9 @@
 ---
-const { type = "button", theme } = Astro.props;
+const { type = "button", color } = Astro.props;
 ---
 
-<!-- de ting knappen skal kunne: --><!-- fuld farve: 5 forskellige farver--><!-- tekst: et ord eller en sætning--><!-- kan være forskellige iconer--><!-- kort sagt: 5 farver, tekst og iconer : responsivt-->
-<button {type}>
+<!-- kort sagt: 5 farver, tekst og iconer : responsivt-->
+<button {type} color={"--Green"}>
   <slot />
 </button>
 

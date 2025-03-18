@@ -29,16 +29,26 @@ import Button from "../components/Button.astro";
             <li><a href="/about">About</a></li>
           </ul>
         </nav>
-        <Button theme="primary">WE'LL WORK WITH YOU</Button>
+        <Button theme="primary">Join</Button>
       </div>
     </header>
     <main><slot /></main>
-    <footer></footer>
+    <footer>
+      <div>
+        <h5>AskExpress</h5>
+        <div class="streg"></div>
+        <p>
+          ©2022 Consultalk. All rights reserved | Terms of Service | Privacy
+          Policy
+        </p>
+      </div>
+    </footer>
   </body>
 
   <style>
     @layer components {
-      header {
+      header,
+      footer {
         background-color: var(--DarkGrey);
       }
       header div {
@@ -63,6 +73,30 @@ import Button from "../components/Button.astro";
         }
         h5,
         a {
+          color: var(--White);
+        }
+      }
+
+      footer div:not(.streg) {
+        display: grid;
+        grid-column: 1fr;
+        grid-row: 1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        gap: 0.5rlh;
+        padding: 1rem;
+
+        .streg {
+          height: 1px;
+          max-width: 50rem;
+          min-width: 80%;
+          border-bottom: solid 0.06rem var(--White);
+        }
+        h5 {
+          text-align: center;
+        }
+        h5,
+        p {
           color: var(--White);
         }
       }
