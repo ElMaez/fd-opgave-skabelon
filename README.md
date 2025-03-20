@@ -1,3 +1,9 @@
+# Min Reflektion
+
+Reflekter kort men fagligt over din løsning med henblik på udfordringerne og successerne ved opgaven.
+Fremhæv specifikke kodestumper, der illustrerer brugen af forskellige teknikker og principper (gerne fra undervisningen).
+Forklar, hvordan du har organiseret din CSS; hvornår er det globalt, og hvornår er det komponent-specifikt.
+
 # Opgaveskabelon til Frontend Design tema på Frontend-valgfaget
 
 Se opgavebeskrivelsen på Fronter.
