@@ -5,7 +5,7 @@ import Button from "./Button.astro";
 
 <section class="hero">
   <img src="/src/assets/img/HeroImg.png" alt="" />
-  <div>
+  <section>
     <h1>Empowering Your Business Growth</h1>
     <p>
       Discover tailored strategies and expert insights to take your business to
@@ -13,9 +13,10 @@ import Button from "./Button.astro";
       sustainable success.
     </p>
     <Button>Book a Meeting</Button>
-  </div>
+  </section>
+  <Services />
 </section>
-<Services />
+
 <style>
   /* Styles her */
   .hero {
@@ -24,15 +25,15 @@ import Button from "./Button.astro";
     background-color: var(--Black);
 
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr minmax(0, 450px) minmax(0, 600px) 1fr;
     align-items: start;
 
-    div {
+    section {
       width: 100%;
-      grid-column: 2 /3;
-      grid-row: 1/-1;
-      padding-top: 7rem;
+      grid-column: 2/3;
+      grid-row: 1/3;
+      padding-top: 5rlh;
       color: var(--White);
 
       p {
@@ -40,7 +41,6 @@ import Button from "./Button.astro";
         margin-block-end: 1rlh;
       }
     }
-
     img {
       height: 100%;
       object-fit: cover;
