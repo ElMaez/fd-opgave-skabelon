@@ -1,0 +1,55 @@
+---
+import Button from "./Button.astro";
+---
+
+<article>
+  <figure>
+    <img src="/src/assets/img/mandmedbriller.jpg" alt="" />
+  </figure>
+  <section>
+    <Button>WE'LL WORK WITH YOU</Button>
+    <h6>What To Expect</h6>
+    <p>
+      Our collaboration is built on transparency, efficiency, and measurable
+      results. Together, we create strategies tailored to your unique needs and
+      goals.
+    </p>
+    <ul>
+      <li>
+        Collaborate to build actionable strategies that drive sustainable growth
+        and deliver tangible outcomes.
+      </li>
+      <li>
+        Identify opportunities to optimize processes and implement impactful
+        solutions with measurable results.
+      </li>
+    </ul>
+  </section>
+</article>
+
+<style>
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 3rlh;
+
+    padding-block-start: 10rlh;
+    padding-block-end: 7rlh;
+
+    figure {
+      grid-column: 1/2;
+
+      img {
+        border-radius: 25px;
+      }
+    }
+    section {
+      grid-column: 2/3;
+
+      ul {
+        list-style-image: url(/src/assets/img/tick.svg);
+      }
+    }
+  }
+</style>

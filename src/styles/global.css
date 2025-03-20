@@ -67,3 +67,7 @@ h5 {
 h6 {
   font-size: var(--Heading06);
 }
+
+ul {
+  list-style: none;
+}

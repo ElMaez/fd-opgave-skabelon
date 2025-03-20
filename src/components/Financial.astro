@@ -1,0 +1,95 @@
+---
+import Button from "./Button.astro";
+
+const fpsInfo = await fetch(
+  "https://frontend-design-theme.netlify.app/api/financialProjections"
+).then((fpsInfo) => fpsInfo.json());
+
+console.log(fpsInfo);
+---
+
+<article>
+  <section>
+    <div>
+      <h6>Financial Projections</h6>
+      <p>
+        Financial projections are essential for planning and monitoring a
+        company’s performance. They provide insights into potential revenue,
+        expenses, and profitability over specific periods.
+      </p>
+    </div>
+    <div>
+      <Button href=""><img src="/src/assets/icons/arrow-left.svg" /> </Button>
+      <Button><img src="/src/assets/icons/arrow--right.svg" /></Button>
+    </div>
+  </section>
+
+  <ul class="slider">
+    {
+      fpsInfo.values.map((fps) => (
+        <li id={fps.titel}>
+          <img src="/src/icons/" alt="" />
+          <h5>{fps.title}</h5>
+          <p>{fps.description}</p>
+        </li>
+      ))
+    }
+  </ul>
+
+  <style>
+    article {
+      width: 80%;
+      justify-self: end;
+
+      section {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+
+        h6 {
+          padding-block-end: 0.5rlh;
+        }
+        p {
+          width: 65ch;
+        }
+        > :last-child {
+          justify-self: start;
+          align-self: end;
+
+          > * {
+            min-width: 4rem;
+            min-height: 4rem;
+            padding: 0;
+            border-radius: 50%;
+
+            img {
+              margin: auto;
+            }
+          }
+        }
+      }
+    }
+    .slider {
+      height: fit-content;
+      padding: 0;
+
+      display: flex;
+      flex-direction: row;
+      gap: 1rlh;
+
+      scroll-snap-type: proximity;
+      overflow-x: scroll;
+
+      li {
+        min-width: 23rem;
+        max-height: fit-content;
+        padding: 3rem;
+        background-color: var(--Grey);
+        border-radius: 25px;
+      }
+      li:nth-last-of-type(3) {
+        background-color: var(--DarkGrey);
+        color: var(--White);
+      }
+    }
+  </style>
+</article>
